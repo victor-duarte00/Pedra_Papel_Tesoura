@@ -14,36 +14,21 @@ start = () =>{
 
 checkResult = () =>{
     let text = ""
+    const winPlayer1 = "O ganhador foi o Player1!"
+    const winPlayer2 = "O ganhador foi o Player2!"
+    const atie = "Empate"
     const result = player1.value + player2.value
     
     console.log(result)
 
-    if(result === "stonescissors"){
-        text = "O ganhador foi o Player1!"
+    if(result === "stonescissors" || result === "paperstone" || result === "scissorspaper"){
+        text = winPlayer1
     } else
-    if(result === "paperstone"){
-        text = "O ganhador foi o Player1!"
+    if(result === "scissorsstone" || result === "stonepaper" || result === "paperscissors"){
+        text = winPlayer2
     }else
-    if(result === "scissorspaper"){
-        text = "O ganhador foi o Player1!"
-    }else
-    if(result === "scissorsstone"){
-        text = "O ganhador foi o Player2!"
-    }else
-    if(result === "stonepaper"){
-        text = "O ganhador foi o Player2!"
-    }else
-    if(result === "paperscissors"){
-        text = "O ganhador foi o Player2!"
-    }else
-    if(result === "stonestone"){
-        text = "Empate!"
-    }else
-    if(result === "paperpaper"){
-        text = "Empate!"
-    }else
-    if(result === "scissorsscissors"){
-        text = "Empate!"
+    if(result === "stonestone" || result === "paperpaper" || result === "scissorsscissors"){
+        text = atie
     }
 
     divGame.style.display = "none"
